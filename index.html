@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cadeira colorida 3D</title>
+<script type="module" src="https://unpkg.com/@google/model-viewer@3.5.0/dist/model-viewer.min.js"></script>
+<style>
+  html,body{height:100%;margin:0;font-family:system-ui,-apple-system,"Segoe UI",sans-serif;background:#f2f3f8;color:#1b1d2b}
+  main{display:flex;flex-direction:column;height:100%;max-width:800px;margin:0 auto;padding:16px;box-sizing:border-box;gap:10px}
+  h1{margin:0;font-size:22px}
+  p{margin:0;color:#5b5f75;font-size:14px}
+  model-viewer{flex:1;min-height:320px;width:100%;background:#e4e7f1;border-radius:16px;--poster-color:transparent}
+  button[slot="ar-button"]{position:absolute;left:50%;bottom:16px;transform:translateX(-50%);
+    background:#2056c8;color:#fff;border:0;border-radius:12px;padding:14px 20px;font-size:16px;font-weight:700}
+</style>
+</head>
+<body>
+<main>
+  <h1>Cadeira colorida 3D</h1>
+  <p>Arraste para girar e pince para ampliar. Toque no botão azul para ver no seu espaço.</p>
+  <model-viewer
+    src="cadeira_colorida_leve.glb"
+    alt="Cadeira de rodas infantil colorida em 3D"
+    camera-controls
+    auto-rotate
+    shadow-intensity="1"
+    exposure="1"
+    scale="0.4 0.4 0.4"
+    ar
+    ar-modes="webxr scene-viewer quick-look"
+    ar-scale="auto"
+    touch-action="pan-y">
+    <button slot="ar-button">Ver em realidade aumentada</button>
+  </model-viewer>
+</main>
+</body>
+</html>
